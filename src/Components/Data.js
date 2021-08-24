@@ -28,10 +28,12 @@ function Data() {
                 <button>get Wheather</button>
             </form>
             <div>
-                {storage.map((data) => <div>
+                {storage.map((data, index) => <div key={index +1}>
                     <h1>City: {data.name}</h1>
                     <p>Weather: {data.weather[0].main}</p>
                     <p>Timezone: {data.timezone}</p>
+                    <p>Temperature: {data.main.temp} fahrenheit</p>
+
 
                 </div>)}
             </div>
