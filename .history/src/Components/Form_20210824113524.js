@@ -18,7 +18,7 @@ const Form = (props) => {
     return (
         <div>
             <form onSubmit={getWheather}>
-                <input class="main-form" value={info.city} onChange={(e) => setInfo({ ...info, city: e.target.value })} type="text" placeholder="city" />
+                <input value={info.city} onChange={(e) => setInfo({ ...info, city: e.target.value })} type="text" placeholder="city" />
                 <input value={info.country} onChange={(e) => setInfo({ ...info, country: e.target.value })} type="text" placeholder="country" />
                 <button type="submit">Get Wheather</button>
             </form>

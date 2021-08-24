@@ -2,7 +2,7 @@ import React, { Component } from "react";
 import Wheather from "./Components/Wheather";
 import Form from "./Components/Form";
 import Data from "./Components/Data";
-import "./App.css";
+import Css from "/App.css";
 
 // c  onst ApiKey = "9442fd74cbb33752ba35d0918a6c892b";
 class App extends Component {
@@ -15,7 +15,7 @@ class App extends Component {
   render() {
     return (
       <div className="App">
-      <h1 className="header">Weather App</h1>
+        Wheather App
         {/* <Form getWheather={this.getWheather } /> */}
         <Data />
       </div>

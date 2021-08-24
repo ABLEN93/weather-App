@@ -4,7 +4,7 @@ class Wheather extends Component {
     render() {
         return (
             <div>
-                Wheather Component
+                Weather Component
             </div>
         )
     }

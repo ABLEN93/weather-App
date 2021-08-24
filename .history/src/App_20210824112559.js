@@ -15,7 +15,7 @@ class App extends Component {
   render() {
     return (
       <div className="App">
-      <h1 className="header">Weather App</h1>
+        Wheather App
         {/* <Form getWheather={this.getWheather } /> */}
         <Data />
       </div>
