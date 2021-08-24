@@ -27,6 +27,7 @@ function Data() {
                 <input onChange={(e)=> setInfo({...info,country:e.target.value})} type="text" placeholder="country"/>
                 <button>get Wheather</button>
             </form>
+
             <div class="info">
                 {storage.map((data, index) => <div key={index + 1}>
                     <h1 class="card-body">City name: {data.name}</h1>
@@ -35,6 +36,15 @@ function Data() {
                     <p class="card-body">Temperature: {data.main.temp}</p>
                     <p class="card-body">Timezone: {data.timezone}</p>
                     <p class="card-body">Visibility: {data.visibility}</p>
+
+            <div>
+                {storage.map((data, index) => <div key={index +1}>
+                    <h1>City: {data.name}</h1>
+                    <p>Weather: {data.weather[0].main}</p>
+                    <p>Timezone: {data.timezone}</p>
+                    <p>Temperature: {data.main.temp} fahrenheit</p>
+
+
                 </div>)}
             </div>
         </div>
