@@ -1,4 +1,64 @@
 .App {
+    background-color: lightblue;
+    padding: 40px;
+
+}
+
+.App h1 {
+    margin-left: 100px;
+
+}
+
+.header {
+    justify-content: center;
+    text-align: center;
+    border-radius: 50%;
+    /* width: 400px; */
+    height: 100px;
+    margin: 20px auto;
+
+}
+
+.main-box {
+    background: rgb(54,143,243);
+background: radial-gradient(circle, rgb(37, 105, 182) 0%, rgba(121,145,167,0.8026509572901326) 59%, rgb(90, 219, 90) 100%);
+    /* background-color: rgb(149, 149, 187); */
+    height: 900px;
+    border: 10px solid rgb(128, 115, 185);
+    border-radius: 10%;
+    width: 70%;
+    margin: auto;
+}
+
+.main-form {
+    padding: 20px;
     background-color: red;
 }
 
+form {
+    padding: 40px;
+    /* display: flex;
+    flex-direction: column; */
+    display: block;
+
+}
+
+form input {
+    padding: 10px;
+    font-size: 16px;
+    margin-right: 30px;
+    width: 400px;
+}
+
+form button {
+    margin: 20px;
+    padding: 10px;
+    width: 180px;
+    border-radius: 50%;
+}
+
+.info {
+    margin-left: 200px;
+    padding: 50px;
+    font-size: 20px;
+}
