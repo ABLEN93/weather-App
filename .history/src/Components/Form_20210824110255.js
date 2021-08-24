@@ -12,7 +12,7 @@ const Form = (props) => {
         const Url = `https://api.openweathermap.org/data/2.5/weather?q=${info.city},${info.country}&appid=9442fd74cbb33752ba35d0918a6c892b`;
         fetch(Url)
             .then(response => response.json())
-            .then(data => setData([...data, data], console.log("helllllooooo", data)));
+            .then(data => setData([data], console.log(data)));
 
     }
     return (
@@ -23,12 +23,12 @@ const Form = (props) => {
                 <button type="submit">Get Wheather</button>
             </form>
             <div>
-                {data.map(result => <div>
-                    <p>City: {result.name}</p>
-                    <p>Description: {result.weather[0].description}</p>
-                    <p>Status: {result.weather[0].main}</p>
-                    <p>Coordinations: {result.weather[0].coord}</p>
-                </div>
+                {data.map(result => <>
+                    <p key={01}>City: {result.name}</p>
+                    <p key={02}>Description: {result.weather[0].description}</p>
+                    <p key={03}>Status: {result.weather[0].main}</p>
+                    <p key={04}>Coordinations: {result.weather[0].coord}</p>
+                </>
                 )}
             </div>
         </div>

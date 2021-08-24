@@ -14,7 +14,7 @@ function Data() {
         e.preventDefault();
         if(info.city!==""&&info.country!==""){fetch(Url)
             .then((result) => result.json())
-            .then((data)=>setStorage([data],console.log("working",storage)))
+            .then((data)=>setStorage([...data, data],console.log("working",storage)))
         } else {
             alert("fill out this one")
         }
@@ -29,13 +29,9 @@ function Data() {
             </form>
             <div>
                 {storage.map((data, index) => <div key={index + 1}>
-                    <h1>City name: {data.name}</h1>
-                    <p>Weather main: {data.weather[0].main}</p>
-                    <p>Weather description: {data.weather[0].description}</p>
-                    <p>Temperature: {data.main.temp}</p>
-                    <p>Timezone: {data.timezone}</p>
-                    <p>Visibility: {data.visibility}</p>
-                    <p>Visibility: {data.visibility}</p>
+                    <h1>{data.name}</h1>
+                    <p>{data.weather[0].main}</p>
+                    <p>{}</p>
                 </div>)}
             </div>
         </div>

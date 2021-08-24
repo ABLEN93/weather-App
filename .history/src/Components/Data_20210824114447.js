@@ -32,10 +32,14 @@ function Data() {
                     <h1>City name: {data.name}</h1>
                     <p>Weather main: {data.weather[0].main}</p>
                     <p>Weather description: {data.weather[0].description}</p>
-                    <p>Temperature: {data.main.temp}</p>
+
+                    <p>{data.main.temp}</p>
                     <p>Timezone: {data.timezone}</p>
                     <p>Visibility: {data.visibility}</p>
                     <p>Visibility: {data.visibility}</p>
+
+
+
                 </div>)}
             </div>
         </div>

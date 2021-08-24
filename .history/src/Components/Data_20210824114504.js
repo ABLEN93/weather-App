@@ -36,6 +36,9 @@ function Data() {
                     <p>Timezone: {data.timezone}</p>
                     <p>Visibility: {data.visibility}</p>
                     <p>Visibility: {data.visibility}</p>
+
+
+
                 </div>)}
             </div>
         </div>
