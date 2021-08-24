@@ -29,8 +29,10 @@ function Data() {
             </form>
             <div>
                 {storage.map((data) => <div>
-                    <h1>{data.name}</h1>
-                    <p>{data.weather[0].main}</p>
+                    <h1>City: {data.name}</h1>
+                    <p>Weather: {data.weather[0].main}</p>
+                    <p>Timezone: {data.timezone}</p>
+
                 </div>)}
             </div>
         </div>
