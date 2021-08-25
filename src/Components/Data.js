@@ -1,4 +1,5 @@
 import React, { useState } from 'react'
+import sun from '../assets/1.gif';
 
 function Data() {
     const [info, setInfo] = useState({
@@ -6,7 +7,7 @@ function Data() {
         country: ""
     });
     const [storage, setStorage] = useState([]);
-    const Url = `https://api.openweathermap.org/data/2.5/weather?q=${info.city},${info.country}&appid=9442fd74cbb33752ba35d0918a6c892b`;
+    const Url = `https://api.openweathermap.org/data/2.5/weather?q=${info.city},${info.country}&units=metric&appid=9442fd74cbb33752ba35d0918a6c892b`;
     function getWheather(e) {
         e.preventDefault();
         if (info.city !== "" && info.country !== "") {
@@ -17,6 +18,7 @@ function Data() {
             alert("fill out this one")
         }
     }
+    // let ApiKey = "9442fd74cbb33752ba35d0918a6c892b";
     return (
         <div class="main-box">
             <form onSubmit={(e) => getWheather(e)}>
@@ -29,9 +31,11 @@ function Data() {
                     <h1 class="card-body">City name: {data.name}</h1>
                     <p class="card-body">Weather main: {data.weather[0].main}</p>
                     <p class="card-body">Weather description: {data.weather[0].description}</p>
-                    <p class="card-body">Temperature: {data.main.temp}</p>
+                    <p class="card-body">Temperature:{Math.floor(Math.round(data.main.temp))}°c
+                        {data.main.temp > 10 ?  <img style={{marginLeft:"10px"}} src={sun}  width='50'/> : null}</p>
                     <p class="card-body">Timezone: {data.timezone}</p>
                     <p class="card-body">Visibility: {data.visibility}</p>
+                    
                 </div>
                 )}
                 </div>
