@@ -2,6 +2,8 @@ import React, { useState } from 'react'
 import sun from '../assets/1.gif';
 import clouds from '../assets/clouds.gif';
 import rain from '../assets/rain.gif';
+import SimpleMap from './Map.js';
+
 
 function Data() {
     const [info, setInfo] = useState({
@@ -19,7 +21,7 @@ function Data() {
         } else {
             alert("fill out this one")
         }
-    }
+    } console.log(storage);
     // let ApiKey = "9442fd74cbb33752ba35d0918a6c892b";
     return (
         <div class="main-box">
@@ -48,8 +50,10 @@ function Data() {
                     <p class="card-body">Visibility: {data.visibility}</p>
                 </div>
                 )}
+                </div>
+                <SimpleMap data={storage} />
             </div>
-        </div>
+        
     )
 }
 export default Data;

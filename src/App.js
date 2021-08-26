@@ -22,7 +22,7 @@ function App  ()  {
         {/* <Form getWheather={this.getWheather } /> */}
         <Data />
         {/* <MapTest/> */}
-        <SimpleMap />
+        
       </div>
     );
   
