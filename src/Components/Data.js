@@ -32,21 +32,20 @@ function Data() {
                 {storage.map((data, index) => <div key={index + 1}>
                     <h1 class="card-body">City name: {data.name}</h1>
                     <p class="card-body">Weather main: {data.weather[0].main}
-                        {data.weather[0].main === "Clouds" ? <img src={clouds} style={{ marginLeft: "20px", borderRadius: "55%" }} width='100'  /> : null}
-                        
+                        {data.weather[0].main === "Clouds" ? <img src={clouds} style={{ marginLeft: "20px", borderRadius: "55%" }} width='100' /> : null}
+
                         {/* .toLowerCase().indexOf("clouds") > -1 */}
                         {/* that over if u wanna write if weather main has word clouds */}
 
                         {data.weather[0].main === "rain" ? <img src={rain} style={{ marginLeft: "20px", borderRadius: "55%" }} width='100' /> : null}
-                        {data.weather[0].main === "sun" || data.weather[0].main === "clear"? <img style={{ marginLeft: "20px",borderRadius:"55%"}} src={sun} width='50' /> : null}</p>
+                        {data.weather[0].main === "sun" || data.weather[0].main === "clear" ? <img style={{ marginLeft: "20px", borderRadius: "55%" }} src={sun} width='50' /> : null}</p>
                     <p class="card-body">Weather description: {data.weather[0].description}
-                        
-                        </p>
+
+                    </p>
                     <p class="card-body">Temperature:{Math.floor(Math.round(data.main.temp))}°c
-                       </p>
+                    </p>
                     <p class="card-body">Timezone: {data.timezone}</p>
                     <p class="card-body">Visibility: {data.visibility}</p>
-
                 </div>
                 )}
             </div>
