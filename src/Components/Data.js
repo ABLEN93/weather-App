@@ -36,7 +36,7 @@ function Data() {
 
                         {/* .toLowerCase().indexOf("clouds") > -1 */}
                         {/* that over if u wanna write if weather main has word clouds */}
-
+                        
                         {data.weather[0].main === "rain" ? <img src={rain} style={{ marginLeft: "20px", borderRadius: "55%" }} width='100' /> : null}
                         {data.weather[0].main === "sun" || data.weather[0].main === "clear" ? <img style={{ marginLeft: "20px", borderRadius: "55%" }} src={sun} width='50' /> : null}</p>
                     <p class="card-body">Weather description: {data.weather[0].description}
