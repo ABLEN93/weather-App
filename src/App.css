@@ -1,50 +1,38 @@
 .App {
 
-    background-image: url(./images/weather);
+    background-image: url(./images/clouds.jpeg);
     background-repeat: no-repeat;
     background-size: 100%  100%;
     padding: 40px;
-
 }
 
-.App h1 {
-    margin-left: 100px;
-
-}
 
 .header {
     justify-content: center;
     text-align: center;
-    background-image: url(./images/D0x2.gif);
+    background-image: url(./images/N8i8.gif);
     background-clip: text;
     -webkit-background-clip: text;
     font-size: 70px;
     font-weight: bolder;
     color: transparent;
-    height: 100px;
-    margin: 20px auto;
+    height: 80px;
 }
 
 .main-box {
 
-background: radial-gradient(circle, rgb(37, 105, 182) 0%, rgba(121,145,167,0.8026509572901326) 59%, rgb(90, 219, 90) 100%);
-    /* background-color: rgb(149, 149, 187); */
-    height: 900px;
-    border: 10px solid rgb(128, 115, 185);
+background:transparent;
+    height: 796px;
+    border: 5px solid rgba(243, 217, 129, 0.796);
     border-radius: 10%;
     width: 70%;
     margin: auto;
+    
 }
 
-.main-form {
-    padding: 20px;
-    background-color: red;
-}
 
 form {
     padding: 40px;
-    /* display: flex;
-    flex-direction: column; */
     display: block;
 
 }
@@ -71,8 +59,6 @@ form button {
 }
 
 .info h1 {
-   
-   color: rgba(65, 45, 27, 0.726);
     /* background-color: rgba(107, 202, 83, 0.116); */
     margin-left: -10px;
 }

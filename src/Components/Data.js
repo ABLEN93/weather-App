@@ -2,7 +2,8 @@ import React, { useState } from 'react'
 import sun from '../assets/1.gif';
 import clouds from '../assets/clouds.gif';
 import rain from '../assets/rain.gif';
-import SimpleMap from './Map.js';
+import jif from '../images/N8i8.gif';
+import './Data.css';
 
 
 function Data() {
@@ -26,13 +27,16 @@ function Data() {
     return (
         <div class="main-box">
             <form onSubmit={(e) => getWheather(e)}>
-                <input onChange={(e) => setInfo({ ...info, city: e.target.value })} type="text" placeholder="city" />
-                <input onChange={(e) => setInfo({ ...info, country: e.target.value })} type="text" placeholder="country" />
-                <button>get Wheather</button>
+                <input className="main-form" onChange={(e) => setInfo({ ...info, city: e.target.value })} type="text" placeholder="city" />
+                <input  className="main-form" onChange={(e) => setInfo({ ...info, country: e.target.value })} type="text" placeholder="country" />
+                <button class="btn btn-outline-info">getWheather</button>
             </form>
             <div class="info">
                 {storage.map((data, index) => <div key={index + 1}>
                     <h1 class="card-body">City name: {data.name}</h1>
+                    <div id="details">
+
+
                     <p class="card-body">Weather main: {data.weather[0].main}
                         {data.weather[0].main === "Clouds" ? <img src={clouds} style={{ marginLeft: "20px", borderRadius: "55%" }} width='100' /> : null}
 
@@ -48,12 +52,14 @@ function Data() {
                     </p>
                     <p class="card-body">Timezone: {data.timezone}</p>
                     <p class="card-body">Visibility: {data.visibility}</p>
+
+
+
+                    </div>
                 </div>
                 )}
                 </div>
-                <SimpleMap data={storage} />
             </div>
-        
     )
 }
 export default Data;

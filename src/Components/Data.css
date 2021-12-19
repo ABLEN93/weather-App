@@ -1,0 +1,13 @@
+h1{
+    color: rgba(243, 217, 129, 0.796);
+}
+
+#details{
+    color: rgb(221, 255, 0);
+    font-size: xx-large;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+.main-form{
+    width: 200px;
+}
